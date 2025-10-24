@@ -5,7 +5,7 @@
 <textarea id=input placeholder="paste text here" rows=15 cols=60>08/02/2025, 20:36 - Maxime: Coucou 😜
 08/02/2025, 20:37 - Séverine: Heyy 😀
 
-08/03/2025, 20:36 - Maxime: ça - ça fait longtemps... mais je vais écrire un long texte pour vérifier que le retour à la ligne fonctionne bien héhéhéhéhéhéhéhéhéhéhéhéhéhé.
+08/03/2025, 20:36 - Maxime: je vais écrire un long texte pour vérifier que le retour à la ligne fonctionne bien: héhéhéhéhéhéhéhéhéhéhéhéhéhé - ça a l'air d'aller.
 08/03/2025, 20:37 - Séverine: ouiii!</textarea>
 <p>Who is on the right? <input id=right value=Maxime>
 <p><button id=go>GO</button>
@@ -35,7 +35,7 @@ go.onclick = () => {
       html += "<div class='bubble " + (part2 == right.value ? "right" : "left") + "'><span class=s1>" + part2 +"</span><span class=s2>" + part1.replace(",","") +"</span><div class=s3>" + part3 +"</span></div></div>";
     }
     else {
-      html += "<br><br><br>";
+      html += "<br>";
     }
   }
   out.innerHTML = html;
@@ -44,10 +44,10 @@ go.onclick = () => {
 
 <style>
 body { font-family: Calibri }
-#out { border: 1px solid; background: #eee; width: 500px; min-height: 20px; overflow: auto; }
-.bubble, br { background: #fff; clear: both; padding: 10px; margin: 5px; border-radius: 10px; border: 1px solid; max-width: 450px; }
+#out { border: 1px solid; background: #eefbff; width: 400px; min-height: 20px; overflow: auto; }
+.bubble, br { background: #fff; clear: both; padding: 5px; margin: 5px; border-radius: 10px; border: 1px solid; max-width: 300px; min-width: 200px; line-height: 12px; font-size: 12px}
 .s1 { font-weight: bold }
-.s2 { color: #aaa; margin: 0 0 0 10px }
-.left { float: left }
-.right { float: right }
+.s2 { color: #888; margin: 0 0 0 10px }
+.left { float: left; background: #fcfcfc;     border-bottom-left-radius: 0; }
+.right { float: right; background: #ebffe9;     border-bottom-right-radius: 0; }
 </style>
